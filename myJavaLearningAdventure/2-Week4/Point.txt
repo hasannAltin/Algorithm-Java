@@ -1,0 +1,88 @@
+public class pointMain {
+
+	public static void main(String[] args) {
+		Point point1 = new Point();
+		point1.x = 5;
+		point1.y = -2;
+		
+		Point point2 = new Point();
+		point2.x = 4;
+		point2.y = 5;
+		
+		System.out.println("point1=("+point1.x+","+point1.y+")");
+		double dist = Math.sqrt(point1.x * point1.x + point1.y * point1.y);
+		System.out.println("distanceFromOrigin ="+dist);
+		
+		System.out.println("point2=("+point2.x+","+point2.y+")");
+		double dist2 = Math.sqrt(point2.x * point2.x + point2.y * point2.y);
+		System.out.println("distanceFromOrigin ="+dist2);
+		
+		
+		point1.x += 10;
+		point1.y += 6;
+		point2.x +=  1;
+		point2.y += 7;
+		System.out.println("point1=("+point1.x+","+point1.y+")");
+		System.out.println("point2=("+point2.x+","+point2.y+")");
+
+	}
+
+}
+/------------------------------------------------------------------------
+
+public class point2 {
+	int x;
+	int y;
+	
+	
+	public double distanceFromOrigin() {
+		return Math.sqrt(x*x+y*y);
+	}
+	
+	public void translate(int dx,int dy) {
+		x += dx;
+		y+= dy;
+	}
+
+}
+/-------------------------------------------------------------------------
+public class pointMain2 {
+
+	public static void main(String[] args) {
+		
+		point2 pnt =new point2();
+		pnt.x=3;
+		pnt.y=8;
+		
+		System.out.println("point ="+pnt.x +","+pnt.y);
+		System.out.println("distance from origin"+pnt.distanceFromOrigin());
+
+	}
+
+}
+/---------------------------------------------------------------------------------
+public class Point3 {
+	int x;
+	int y;
+	
+	public Point3(int x, int y) {
+		this.x = x;
+		this.y = y;
+		
+		
+	}
+	
+	
+	
+	
+	
+	public double distanceFromOrigin() {
+		return Math.sqrt(x*x+y*y);
+	}
+	
+	public void translate(int dx,int dy) {
+		x += dx;
+		y+= dy;
+	}
+
+}
